@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>addToMenu</key>
+	<array/>
+	<key>developer</key>
+	<string>Rafał Buchner</string>
+	<key>developerURL</key>
+	<string>http://github.com/rafalbuchner</string>
+	<key>html</key>
+	<false/>
+	<key>launchAtStartUp</key>
+	<true/>
+	<key>mainScript</key>
+	<string>zenExtensions.py</string>
+	<key>name</key>
+	<string>ZenExtensions</string>
+	<key>requiresVersionMajor</key>
+	<string>3</string>
+	<key>requiresVersionMinor</key>
+	<string>2</string>
+	<key>timeStamp</key>
+	<real>1691610580.931114</real>
+	<key>version</key>
+	<string>0.1.0</string>
+</dict>
+</plist>
