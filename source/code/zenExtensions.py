@@ -44,7 +44,7 @@ async def sortExtensionsMenu():
     extensionsItem = menubar.itemWithTitle_("Extensions")
     extensionsMenu = extensionsItem.submenu()
     try:
-        mechanicItem = sortMenu(extensionsMenu)
+        sortMenu(extensionsMenu)
     except:
         import traceback
         print("Err")
