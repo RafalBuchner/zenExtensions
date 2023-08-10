@@ -15,11 +15,11 @@ def sortMenu(menu):
     # create a descriptor that will sort files alphabetically and based on existance of submenus
     submenuDescriptor = AppKit.NSSortDescriptor.alloc().initWithKey_ascending_("hasSubmenu", False)
     itemArray = itemArray.sortedArrayUsingDescriptors_([submenuDescriptor, alphaDescriptor])
-    mechanicItem = None
+    bottomItems = []
     newItemArray = AppKit.NSMutableArray.alloc().init()
     for item in itemArray:
-        if item.title() == "Mechanic 2":
-            mechanicItem = item
+        if item.title() in ["Mechanic 2", "Update Menu", "Reveal Script folder"]:
+            bottomItems.append(item)
             continue
         newItemArray.addObject_(item)
         # The following code fixes NSPopUpButton's confusion that occurs when
@@ -33,11 +33,11 @@ def sortMenu(menu):
         #     sortMenu(item.submenu())
 
     newItemArray.addObject_(AppKit.NSMenuItem.separatorItem())
-    if mechanicItem:
-        newItemArray.addObject_(mechanicItem)
+    for item in bottomItems:
+        newItemArray.addObject_(item)
     test = AppKit.NSArray.alloc().initWithArray_(newItemArray)
     menu.setItemArray_(test)
-    return mechanicItem
+    return
 
 async def sortExtensionsMenu():
     await asyncio.sleep(0.1)
