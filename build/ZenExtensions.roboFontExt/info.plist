@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
+<plist version="1.1">
 <dict>
 	<key>addToMenu</key>
 	<array/>
@@ -23,6 +23,6 @@
 	<key>timeStamp</key>
 	<real>1691611915.252764</real>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.1.1</string>
 </dict>
 </plist>

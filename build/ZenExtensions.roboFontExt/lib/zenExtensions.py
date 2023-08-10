@@ -33,7 +33,8 @@ def sortMenu(menu):
         #     sortMenu(item.submenu())
 
     newItemArray.addObject_(AppKit.NSMenuItem.separatorItem())
-    newItemArray.addObject_(mechanicItem)
+    if mechanicItem:
+        newItemArray.addObject_(mechanicItem)
     test = AppKit.NSArray.alloc().initWithArray_(newItemArray)
     menu.setItemArray_(test)
     return mechanicItem
@@ -43,8 +44,11 @@ async def sortExtensionsMenu():
     menubar = AppKit.NSApp().mainMenu()
     extensionsItem = menubar.itemWithTitle_("Extensions")
     extensionsMenu = extensionsItem.submenu()
+    scriptsItem = menubar.itemWithTitle_("Scripts")
+    scriptsMenu = scriptsItem.submenu()
     try:
         sortMenu(extensionsMenu)
+        sortMenu(scriptsMenu)
     except:
         import traceback
         print("Err")
